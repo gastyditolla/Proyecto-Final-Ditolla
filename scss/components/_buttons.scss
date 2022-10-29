@@ -1,0 +1,46 @@
+.boton-enviar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 3rem;
+    background-color: #BDD473;
+    font-family: 'Secular One', sans-serif;
+    color: #006718;
+    border-radius: 1.3rem;
+    cursor: pointer;
+    border: none;
+    transition: .3s ease all;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.boton-enviar:hover {
+    color: #BDD473;
+    transition: .1s ease all;
+    border-color: #BDD473;
+    border: solid;
+}
+
+.boton-enviar::after {
+    content: "";
+    width: 100%;
+    height: 300px;
+    background-color: #006718;
+    position: absolute;
+    z-index: 1;
+    top: -500px;
+    border-radius: 0px 0px 300px 300px;
+    transition: .3s linear all;
+}
+
+.boton-enviar span {
+    position: relative;
+    z-index: 2;
+    transition: 2s ease all;
+}
+
+.boton-enviar:hover::after {
+    top: 0px;
+}
